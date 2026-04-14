@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Study notes by Rifat Hasan Shakil." />
+  <title>Notes | Rifat Hasan Shakil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Rifat Hasan Shakil</a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown" data-dropdown>
+          <button class="nav-dropdown-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">
+            About Me
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu" id="about-menu" data-dropdown-menu>
+            <a href="about.html#skills">Skills</a>
+            <a href="about.html#education">Education</a>
+            <a href="about.html#certifications">Certifications</a>
+          </div>
+        </div>
+        <a href="projects.html">Projects</a>
+        <a href="blogs.html">Blogs</a>
+        <a class="active" href="notes.html">Notes</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+      <a class="talk-btn" href="contact.html">Let's Talk</a>
+      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    </div>
+    <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
+      <a href="index.html">Home</a>
+      <details>
+        <summary>About Me</summary>
+        <a href="about.html#skills">Skills</a>
+        <a href="about.html#education">Education</a>
+        <a href="about.html#certifications">Certifications</a>
+      </details>
+      <a href="projects.html">Projects</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="notes.html">Notes</a>
+      <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+      <a href="contact.html">Let's Talk</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-kicker">Notes</div>
+        <h1>Quick references and reusable study summaries</h1>
+        <p class="hero-subtitle">Collected cheat sheets and practical reminders for statistics, machine learning, and data handling.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <article class="card">
+          <h3>Hypothesis Testing Cheatsheet</h3>
+          <ul>
+            <li>Assumptions checklist before selecting a test</li>
+            <li>How to interpret p-values and confidence intervals together</li>
+            <li>Common pitfalls in one-tailed vs two-tailed testing</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Regression Diagnostics Checklist</h3>
+          <ul>
+            <li>Residual shape and variance checks</li>
+            <li>Multicollinearity via VIF and condition numbers</li>
+            <li>Influence points and leverage review workflow</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Classification Model Evaluation</h3>
+          <ul>
+            <li>Confusion matrix reading strategy</li>
+            <li>Precision, recall, F1, ROC-AUC by objective</li>
+            <li>Threshold tuning for imbalanced classes</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Data Cleaning Pipeline</h3>
+          <ul>
+            <li>Missing value strategy map</li>
+            <li>Outlier handling with IQR and robust alternatives</li>
+            <li>Feature encoding and scaling order of operations</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Rifat Hasan Shakil</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

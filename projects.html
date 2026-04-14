@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Rifat Hasan Shakil in statistics, machine learning, and visualization." />
+  <title>Projects | Rifat Hasan Shakil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Rifat Hasan Shakil</a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown" data-dropdown>
+          <button class="nav-dropdown-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">
+            About Me
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu" id="about-menu" data-dropdown-menu>
+            <a href="about.html#skills">Skills</a>
+            <a href="about.html#education">Education</a>
+            <a href="about.html#certifications">Certifications</a>
+          </div>
+        </div>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="notes.html">Notes</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+      <a class="talk-btn" href="contact.html">Let's Talk</a>
+      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    </div>
+    <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
+      <a href="index.html">Home</a>
+      <details>
+        <summary>About Me</summary>
+        <a href="about.html#skills">Skills</a>
+        <a href="about.html#education">Education</a>
+        <a href="about.html#certifications">Certifications</a>
+      </details>
+      <a href="projects.html">Projects</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="notes.html">Notes</a>
+      <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+      <a href="contact.html">Let's Talk</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-kicker">Projects</div>
+        <h1>Selected work in statistics and machine learning</h1>
+        <p class="hero-subtitle">A sample of projects focused on prediction, pattern discovery, and interpretable analytics.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-3">
+        <article class="card project-card">
+          <h3>ARIMA Time Series Forecasting</h3>
+          <p class="project-meta">R, forecast, ggplot2</p>
+          <p>Forecasting economic indicators with stationarity diagnostics and MAE/RMSE evaluation.</p>
+          <a class="link-btn" href="#">Project Link</a>
+        </article>
+        <article class="card project-card">
+          <h3>KNN Classification Study</h3>
+          <p class="project-meta">Python, scikit-learn, pandas</p>
+          <p>Model training, hyperparameter tuning, and confusion-matrix driven evaluation for multiclass data.</p>
+          <a class="link-btn" href="#">Project Link</a>
+        </article>
+        <article class="card project-card">
+          <h3>Market Basket Analysis</h3>
+          <p class="project-meta">Python, mlxtend, NetworkX</p>
+          <p>Frequent itemsets and association rules using support, confidence, and lift metrics.</p>
+          <a class="link-btn" href="#">Project Link</a>
+        </article>
+        <article class="card project-card">
+          <h3>Advanced Regression Analysis</h3>
+          <p class="project-meta">R, glm, diagnostics</p>
+          <p>Regression models with VIF checks, residual diagnostics, and model selection with AIC/BIC.</p>
+          <a class="link-btn" href="#">Project Link</a>
+        </article>
+        <article class="card project-card">
+          <h3>DBSCAN Clustering</h3>
+          <p class="project-meta">Python, scikit-learn, PCA</p>
+          <p>Density-based clustering compared with K-Means and tuned through silhouette scoring.</p>
+          <a class="link-btn" href="#">Project Link</a>
+        </article>
+        <article class="card project-card">
+          <h3>Exploratory Data Dashboard</h3>
+          <p class="project-meta">Python, seaborn, plotly</p>
+          <p>Interactive EDA workflow covering missing values, outliers, and correlation patterns.</p>
+          <a class="link-btn" href="#">Project Link</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Rifat Hasan Shakil</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

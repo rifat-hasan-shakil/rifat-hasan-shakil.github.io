@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rifat Hasan Shakil portfolio home page." />
+  <title>Home | Rifat Hasan Shakil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Rifat Hasan Shakil</a>
+      <nav class="main-nav" aria-label="Primary">
+        <a class="active" href="index.html">Home</a>
+        <div class="nav-dropdown" data-dropdown>
+          <button class="nav-dropdown-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">
+            About Me
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="dropdown-menu" id="about-menu" data-dropdown-menu>
+            <a href="about.html#skills">Skills</a>
+            <a href="about.html#education">Education</a>
+            <a href="about.html#certifications">Certifications</a>
+          </div>
+        </div>
+        <a href="projects.html">Projects</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="notes.html">Notes</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+      <a class="talk-btn" href="contact.html">Let's Talk</a>
+      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    </div>
+    <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
+      <a href="index.html">Home</a>
+      <details>
+        <summary>About Me</summary>
+        <a href="about.html#skills">Skills</a>
+        <a href="about.html#education">Education</a>
+        <a href="about.html#certifications">Certifications</a>
+      </details>
+      <a href="projects.html">Projects</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="notes.html">Notes</a>
+      <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+      <a href="contact.html">Let's Talk</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-kicker">Home</div>
+        <h1><span class="typing-text" data-typing-target></span></h1>
+        <p class="hero-subtitle">I am Rifat Hasan Shakil, a Statistics Honors student at Pabna University of Science and Technology. I build data projects across modeling, analytics, and storytelling for real-world use cases.</p>
+        <div class="pills" style="margin-top: 16px;">
+          <span class="pill">Statistics</span>
+          <span class="pill">Machine Learning</span>
+          <span class="pill">Data Visualization</span>
+          <span class="pill">Research</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-3">
+        <article class="card">
+          <h3>About Me</h3>
+          <p>Learn my skill stack, education path, and certifications in one structured page.</p>
+          <a class="link-btn" href="about.html">Go to About</a>
+        </article>
+        <article class="card">
+          <h3>Project Portfolio</h3>
+          <p>Browse selected projects in time series, classification, association rules, and clustering.</p>
+          <a class="link-btn" href="projects.html">View Projects</a>
+        </article>
+        <article class="card">
+          <h3>Writing and Notes</h3>
+          <p>Read concise blog posts and working notes for analytics workflows and model diagnostics.</p>
+          <div style="display:flex; gap:10px; flex-wrap: wrap;">
+            <a class="link-btn" href="blogs.html">Blogs</a>
+            <a class="link-btn" href="notes.html">Notes</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card">
+        <h2 class="section-title" style="margin-bottom: 12px;">Open for opportunities</h2>
+        <p class="hero-subtitle" style="max-width: 100%; margin: 0 0 18px;">Available for internships, collaborative research, and analytics-focused project work.</p>
+        <a class="talk-btn" href="contact.html">Start a Conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Rifat Hasan Shakil</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
