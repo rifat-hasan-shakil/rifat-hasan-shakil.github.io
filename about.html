@@ -1,148 +1,233 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About Rifat Hasan Shakil: skills, education, and certifications." />
-  <title>About Me | Rifat Hasan Shakil</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Rifat Hasan Shakil</title>
+    <meta name="description" content="About Rifat Hasan Shakil: skills, education, and data science journey.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">Rifat Hasan Shakil</a>
-      <nav class="main-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <div class="nav-dropdown open" data-dropdown>
-          <button class="nav-dropdown-toggle active" data-dropdown-toggle aria-expanded="true" aria-haspopup="true" aria-controls="about-menu">
-            About Me
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="dropdown-menu" id="about-menu" data-dropdown-menu>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#certifications">Certifications</a>
-          </div>
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="brandOrbClip"><circle cx="20" cy="20" r="18"/></clipPath></defs><g clip-path="url(#brandOrbClip)" fill="currentColor"><rect x="2" y="5" width="36" height="4" rx="2"/><rect x="2" y="12" width="32" height="4" rx="2"/><rect x="8" y="19" width="30" height="4" rx="2"/><rect x="2" y="26" width="34" height="4" rx="2"/><rect x="2" y="33" width="27" height="4" rx="2"/></g></svg></span><span class="brand-name">Rifat Hasan Shakil</span></a>
+            <nav class="main-nav" aria-label="Primary">
+                <a class="nav-link" href="index.html">Home</a>
+                <div class="nav-dropdown" data-dropdown>
+                    <button class="drop-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">About <svg class="drop-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+                    <div class="drop-menu" id="about-menu" data-dropdown-menu>
+                        <a href="#skills">Skills</a>
+                        <a href="#education">Education</a>
+                        <a href="#certifications">Certifications</a>
+                    </div>
+                </div>
+                <a class="nav-link" href="project.html">Projects</a>
+                <a class="nav-link" href="blogs.html">Blogs</a>
+                <a class="nav-link" href="notes.html">Notes</a>
+            </nav>
+            <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false"><span class="theme-switch" aria-hidden="true"><span class="theme-switch__track"></span><span class="theme-switch__thumb"></span></span></button>
+            <a class="contact-btn" href="contact.html">Let's Talk</a>
+            <button class="mobile-btn" type="button" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">=</button>
         </div>
-        <a href="projects.html">Projects</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="notes.html">Notes</a>
-      </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
-      <a class="talk-btn" href="contact.html">Let's Talk</a>
-      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">☰</button>
-    </div>
-    <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
-      <a href="index.html">Home</a>
-      <details open>
-        <summary>About Me</summary>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-      </details>
-      <a href="projects.html">Projects</a>
-      <a href="blogs.html">Blogs</a>
-      <a href="notes.html">Notes</a>
-      <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
-      <a href="contact.html">Let's Talk</a>
-    </div>
-  </header>
+        <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
+            <a href="index.html">Home</a>
+            <details open>
+                <summary>About</summary>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Certifications</a>
+            </details>
+            <a href="project.html">Projects</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="notes.html">Notes</a>
+            <a href="contact.html">Let's Talk</a>
+        </div>
+    </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-kicker">About Me</div>
-        <h1>My journey in data, statistics, and practical problem solving</h1>
-        <p class="hero-subtitle">I am Rifat Hasan Shakil, a Statistics student at Pabna University of Science and Technology. I enjoy turning real-world datasets into useful decisions through clean analysis, interpretable models, and strong communication.</p>
-      </div>
-    </section>
+    <main>
+        <section class="container section reveal">
+            <span class="kicker">About Me</span>
+            <h1>Rifat Hasan Shakil</h1>
+            <p class="hero-subtitle">
+                I am a dynamically driven Statistics Honors Student at Pabna University of Science and Technology (PUST). My expertise lies at the intersection of statistical mathematics and programmed data analysis.
+            </p>
+            <p class="hero-subtitle">
+                As a passionate Data Enthusiast, I excel in transforming ambiguous, complex datasets into polished, actionable business strategies. I thrive on diving deep into data ecosystems, extracting impactful metrics, and presenting them through seamless visual storytelling.
+            </p>
+        </section>
 
-    <section class="section" id="skills">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="grid grid-3">
-          <article class="card">
-            <h3>Programming</h3>
-            <div class="pills">
-              <span class="pill">Python</span>
-              <span class="pill">R</span>
-              <span class="pill">SQL</span>
-              <span class="pill">C++</span>
+        <section class="container section" id="skills">
+            <h2 class="section-title reveal">Skills</h2>
+            <div class="skills-showcase">
+                <article class="card reveal skill-card skill-card-powerbi">
+                    <div class="skill-head">
+                        <img src="assets/tools/powerbi.svg" alt="Power BI icon">
+                        <div>
+                            <h3>Power BI</h3>
+                            <p>Dashboard Creation, Data Modeling, DAX Formulas</p>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="project-tag">Power BI</span>
+                        <span class="project-tag">DAX</span>
+                        <span class="project-tag">Data Modeling</span>
+                    </div>
+                </article>
+                <article class="card reveal skill-card skill-card-excel">
+                    <div class="skill-head">
+                        <img src="assets/tools/excel.png" alt="Excel icon">
+                        <div>
+                            <h3>Excel / Google Sheets</h3>
+                            <p>Advanced Functions, Pivot Tables, Data Analysis</p>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="project-tag">Excel</span>
+                        <span class="project-tag">Google Sheets</span>
+                        <span class="project-tag">Pivot Tables</span>
+                    </div>
+                </article>
+                <article class="card reveal skill-card skill-card-python">
+                    <div class="skill-head">
+                        <img src="assets/tools/python.svg" alt="Python icon">
+                        <div>
+                            <h3>Python</h3>
+                            <p>Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn</p>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="project-tag">Pandas</span>
+                        <span class="project-tag">NumPy</span>
+                        <span class="project-tag">Scikit-learn</span>
+                    </div>
+                </article>
+                <article class="card reveal skill-card skill-card-r">
+                    <div class="skill-head">
+                        <img src="assets/tools/r.svg" alt="R icon">
+                        <div>
+                            <h3>R</h3>
+                            <p>Statistical Analysis and Visualization</p>
+                        </div>
+                    </div>
+                    <div class="skill-list">
+                        <span class="project-tag">Statistics</span>
+                        <span class="project-tag">Visualization</span>
+                        <span class="project-tag">R</span>
+                    </div>
+                </article>
             </div>
-          </article>
-          <article class="card">
-            <h3>Data Stack</h3>
-            <div class="pills">
-              <span class="pill">pandas</span>
-              <span class="pill">NumPy</span>
-              <span class="pill">scikit-learn</span>
-              <span class="pill">Power BI</span>
+        </section>
+
+        <section class="container section reveal" id="technical-arsenal">
+            <h2 class="section-title">Technical Arsenal</h2>
+            <div class="card">
+                <div class="tool-grid">
+                    <article class="tool-item">
+                        <img src="assets/tools/powerbi.svg" alt="Power BI logo">
+                        <h4>Power BI</h4>
+                    </article>
+                    <article class="tool-item">
+                        <img src="assets/tools/excel.png" alt="Excel logo">
+                        <h4>Excel</h4>
+                    </article>
+                    <article class="tool-item">
+                        <img src="assets/tools/spss.svg" alt="SPSS logo">
+                        <h4>SPSS</h4>
+                    </article>
+                    <article class="tool-item">
+                        <img src="assets/tools/sql.svg" alt="SQL logo">
+                        <h4>SQL</h4>
+                    </article>
+                    <article class="tool-item">
+                        <img src="assets/tools/access.png" alt="MS Access logo">
+                        <h4>MS Access</h4>
+                    </article>
+                    <article class="tool-item">
+                        <img src="assets/tools/jupyter.svg" alt="Jupyter logo">
+                        <h4>Jupyter</h4>
+                    </article>
+                    <article class="tool-item">
+                        <img src="assets/tools/vscode.svg" alt="VS Code logo">
+                        <h4>VS Code</h4>
+                    </article>
+                    <article class="tool-item">
+                        <img src="assets/tools/kaggle.svg" alt="Kaggle logo">
+                        <h4>Kaggle</h4>
+                    </article>
+                </div>
             </div>
-          </article>
-          <article class="card">
-            <h3>Research Focus</h3>
-            <div class="pills">
-              <span class="pill">Statistical Modeling</span>
-              <span class="pill">ML</span>
-              <span class="pill">Data Visualization</span>
-              <span class="pill">Time Series</span>
+        </section>
+
+        <section class="container section" id="education">
+            <h2 class="section-title reveal">Education</h2>
+            <div class="education-feed reveal">
+                <article class="education-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <img class="education-thumb" src="assets/education/university.jpeg" alt="Pabna University of Science and Technology">
+                    <div class="education-content">
+                        <h3>Pabna University of Science and Technology</h3>
+                        <p class="education-degree">Bachelor of Science (B.Sc.) in Statistics</p>
+                        <div class="education-tags">
+                            <span>Probability Theory</span>
+                            <span>Regression Analysis</span>
+                            <span>Multivariate Analysis</span>
+                            <span>Data Mining</span>
+                            <span>R Language</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <p class="education-year">2022 - 2026</p>
+                </article>
+
+                <article class="education-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <img class="education-thumb" src="assets/education/college.jpg" alt="BPATC School and College">
+                    <div class="education-content">
+                        <h3>BPATC School and College</h3>
+                        <p class="education-degree">Higher Secondary Certificate (HSC)</p>
+                        <p class="education-meta">Science Group</p>
+                        <p class="education-meta">GPA: <strong>4.63</strong> / 5.00</p>
+                    </div>
+                    <p class="education-year">2018 - 2020</p>
+                </article>
+
+                <article class="education-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <img class="education-thumb" src="assets/education/school.jpg" alt="Savar Cantonment Board Boys' High School">
+                    <div class="education-content">
+                        <h3>Savar Cantonment Board Boys' High School</h3>
+                        <p class="education-degree">Secondary School Certificate (SSC)</p>
+                        <p class="education-meta">Science Group</p>
+                        <p class="education-meta">GPA: <strong>4.50</strong> / 5.00</p>
+                    </div>
+                    <p class="education-year">2014 - 2018</p>
+                </article>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="section" id="education">
-      <div class="container">
-        <h2 class="section-title">Education</h2>
-        <div class="grid grid-2">
-          <article class="card">
-            <h3>BSc Honours in Statistics</h3>
-            <p>Pabna University of Science and Technology (PUST), 2021 - Present</p>
-            <ul>
-              <li>Statistical Inference, Regression, Time Series, Data Mining, ML</li>
-              <li>Hands-on work with R, Python, SPSS, and reproducible analysis</li>
-              <li>Applied projects on real economic and social datasets</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Higher Secondary Certificate (Science)</h3>
-            <p>Mathematics, Physics, Chemistry, and Biology foundation in Bangladesh.</p>
-            <ul>
-              <li>Strong analytical base for advanced quantitative coursework</li>
-              <li>Built early interest in probability and computation</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+        <section class="container section" id="certifications">
+            <h2 class="section-title reveal">Certifications</h2>
+            <div class="grid grid-3">
+                <article class="card reveal">
+                    <h3>Data Analysis with Python</h3>
+                    <p>Workflow from data cleaning to interpretation using practical datasets and visual diagnostics.</p>
+                </article>
+                <article class="card reveal">
+                    <h3>Machine Learning Foundations</h3>
+                    <p>Model training, evaluation metrics, feature engineering, and pipeline thinking.</p>
+                </article>
+                <article class="card reveal">
+                    <h3>SQL for Analytics</h3>
+                    <p>Advanced querying, joins, data extraction, and business-oriented reporting.</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-    <section class="section" id="certifications">
-      <div class="container">
-        <h2 class="section-title">Certifications</h2>
-        <div class="grid grid-3">
-          <article class="card">
-            <h3>Machine Learning Fundamentals</h3>
-            <p>Core supervised and unsupervised modeling workflows with practical evaluation metrics.</p>
-          </article>
-          <article class="card">
-            <h3>Data Analysis with Python</h3>
-            <p>Data cleaning, EDA, and statistical testing pipelines using pandas and visualization libraries.</p>
-          </article>
-          <article class="card">
-            <h3>SQL for Data Analytics</h3>
-            <p>Relational querying, joins, aggregations, and reporting patterns for business datasets.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
+    <footer class="site-footer">
+        <div class="container">&copy; <span data-year></span> Rifat Hasan Shakil</div>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="container">© 2026 Rifat Hasan Shakil</div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-

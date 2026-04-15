@@ -1,105 +1,152 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rifat Hasan Shakil portfolio home page." />
-  <title>Home | Rifat Hasan Shakil</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifat Hasan Shakil | Data Analyst Portfolio</title>
+    <meta name="description" content="Portfolio of Rifat Hasan Shakil, a Statistics Honors student at PUST focused on data analysis, statistical modeling, and predictive analytics.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">Rifat Hasan Shakil</a>
-      <nav class="main-nav" aria-label="Primary">
-        <a class="active" href="index.html">Home</a>
-        <div class="nav-dropdown" data-dropdown>
-          <button class="nav-dropdown-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">
-            About Me
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="dropdown-menu" id="about-menu" data-dropdown-menu>
-            <a href="about.html#skills">Skills</a>
-            <a href="about.html#education">Education</a>
-            <a href="about.html#certifications">Certifications</a>
-          </div>
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="brandOrbClip"><circle cx="20" cy="20" r="18"/></clipPath></defs><g clip-path="url(#brandOrbClip)" fill="currentColor"><rect x="2" y="5" width="36" height="4" rx="2"/><rect x="2" y="12" width="32" height="4" rx="2"/><rect x="8" y="19" width="30" height="4" rx="2"/><rect x="2" y="26" width="34" height="4" rx="2"/><rect x="2" y="33" width="27" height="4" rx="2"/></g></svg></span>
+                <span class="brand-name">Rifat Hasan Shakil</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Primary">
+                <a class="nav-link active" href="index.html">Home</a>
+                <div class="nav-dropdown" data-dropdown>
+                    <button class="drop-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">
+                        About
+                        <svg class="drop-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                            <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div class="drop-menu" id="about-menu" data-dropdown-menu>
+                        <a href="about.html#skills">Skills</a>
+                        <a href="about.html#education">Education</a>
+                        <a href="about.html#certifications">Certifications</a>
+                    </div>
+                </div>
+                <a class="nav-link" href="project.html">Projects</a>
+                <a class="nav-link" href="blogs.html">Blogs</a>
+                <a class="nav-link" href="notes.html">Notes</a>
+            </nav>
+
+            <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false"><span class="theme-switch" aria-hidden="true"><span class="theme-switch__track"></span><span class="theme-switch__thumb"></span></span></button>
+            <a class="contact-btn" href="contact.html">Let's Talk</a>
+            <button class="mobile-btn" type="button" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">=</button>
         </div>
-        <a href="projects.html">Projects</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="notes.html">Notes</a>
-      </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
-      <a class="talk-btn" href="contact.html">Let's Talk</a>
-      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">☰</button>
-    </div>
-    <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
-      <a href="index.html">Home</a>
-      <details>
-        <summary>About Me</summary>
-        <a href="about.html#skills">Skills</a>
-        <a href="about.html#education">Education</a>
-        <a href="about.html#certifications">Certifications</a>
-      </details>
-      <a href="projects.html">Projects</a>
-      <a href="blogs.html">Blogs</a>
-      <a href="notes.html">Notes</a>
-      <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
-      <a href="contact.html">Let's Talk</a>
-    </div>
-  </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-kicker">Home</div>
-        <h1><span class="typing-text" data-typing-target></span></h1>
-        <p class="hero-subtitle">I am Rifat Hasan Shakil, a Statistics Honors student at Pabna University of Science and Technology. I build data projects across modeling, analytics, and storytelling for real-world use cases.</p>
-        <div class="pills" style="margin-top: 16px;">
-          <span class="pill">Statistics</span>
-          <span class="pill">Machine Learning</span>
-          <span class="pill">Data Visualization</span>
-          <span class="pill">Research</span>
+        <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
+            <a href="index.html">Home</a>
+            <details>
+                <summary>About</summary>
+                <a href="about.html#skills">Skills</a>
+                <a href="about.html#education">Education</a>
+                <a href="about.html#certifications">Certifications</a>
+            </details>
+            <a href="project.html">Projects</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="notes.html">Notes</a>
+            <a href="contact.html">Let's Talk</a>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <section class="section">
-      <div class="container grid grid-3">
-        <article class="card">
-          <h3>About Me</h3>
-          <p>Learn my skill stack, education path, and certifications in one structured page.</p>
-          <a class="link-btn" href="about.html">Go to About</a>
-        </article>
-        <article class="card">
-          <h3>Project Portfolio</h3>
-          <p>Browse selected projects in time series, classification, association rules, and clustering.</p>
-          <a class="link-btn" href="projects.html">View Projects</a>
-        </article>
-        <article class="card">
-          <h3>Writing and Notes</h3>
-          <p>Read concise blog posts and working notes for analytics workflows and model diagnostics.</p>
-          <div style="display:flex; gap:10px; flex-wrap: wrap;">
-            <a class="link-btn" href="blogs.html">Blogs</a>
-            <a class="link-btn" href="notes.html">Notes</a>
-          </div>
-        </article>
-      </div>
-    </section>
+    <main>
+        <section class="container hero">
+            <aside class="profile-card reveal">
+                <img class="profile-photo" src="assets/images/shakil.png" alt="Portrait of Rifat Hasan Shakil">
+                <h3>Statistics Honors Student</h3>
+                <p class="meta">Pabna University of Science and Technology</p>
 
-    <section class="section">
-      <div class="container card">
-        <h2 class="section-title" style="margin-bottom: 12px;">Open for opportunities</h2>
-        <p class="hero-subtitle" style="max-width: 100%; margin: 0 0 18px;">Available for internships, collaborative research, and analytics-focused project work.</p>
-        <a class="talk-btn" href="contact.html">Start a Conversation</a>
-      </div>
-    </section>
-  </main>
+                <div class="chip-row">
+                    <span class="chip">Python</span>
+                    <span class="chip">R</span>
+                    <span class="chip">SQL</span>
+                    <span class="chip">Power BI</span>
+                    <span class="chip">SPSS</span>
+                    <span class="chip">Excel</span>
+                </div>
 
-  <footer class="site-footer">
-    <div class="container">© 2026 Rifat Hasan Shakil</div>
-  </footer>
+                <div class="social-row">
+                    <a class="icon-link" href="https://linkedin.com/in/rifat-hasan-shakil" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5V20H3.83V8.5h3.11ZM5.39 3.5c1 0 1.81.8 1.81 1.8s-.81 1.8-1.81 1.8a1.8 1.8 0 1 1 0-3.6Zm4.19 5H12.6v1.57h.04c.44-.84 1.5-1.72 3.08-1.72 3.29 0 3.9 2.17 3.9 4.99V20h-3.11v-5.34c0-1.27-.02-2.9-1.77-2.9-1.78 0-2.05 1.39-2.05 2.82V20H9.58V8.5Z" fill="currentColor"/></svg>
+                    </a>
+                    <a class="icon-link" href="https://www.kaggle.com/rifathasanshakil3301" target="_blank" rel="noopener" aria-label="Kaggle">
+                        <img src="assets/tools/kaggle.svg" alt="" aria-hidden="true">
+                    </a>
+                    <a class="icon-link" href="https://www.hackerrank.com/rifathasanshakil" target="_blank" rel="noopener" aria-label="HackerRank">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 20 8v8l-8 4.5L4 16V8l8-4.5Zm-4.7 6.08v4.84L12 16.2l4.7-1.78V9.58L12 7.8 7.3 9.58Zm4.7-3.34-6.4 3.06L12 12.36l6.4-3.06L12 6.24Z" fill="currentColor"/></svg>
+                    </a>
+                    <a class="icon-link" href="mailto:rifathasansakil@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16A1.5 1.5 0 0 1 21.5 8v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Zm0 2v.38l8 5.2 8-5.2V8.5H4Zm16 7V10.2l-7.46 4.84a1 1 0 0 1-1.08 0L4 10.2V15.5h16Z" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </aside>
 
-  <script src="script.js"></script>
+            <section class="hero-copy card reveal">
+                <span class="kicker">Welcome</span>
+                <div class="hero-copy__head">
+                    <p class="hero-subtitle">
+                        I am a dynamically driven Statistics Honors Student at Pabna University of Science and Technology (PUST). My expertise lies at the intersection of statistical mathematics and programmed data analysis.
+                    </p>
+                    <p class="hero-subtitle">
+                        As a passionate Data Enthusiast, I excel in transforming ambiguous, complex datasets into polished, actionable business strategies. I thrive on diving deep into data ecosystems, extracting impactful metrics, and presenting them through seamless visual storytelling.
+                    </p>
+                </div>
+
+                <div class="hero-highlights" aria-label="Homepage highlights">
+                    <article class="hero-highlight">
+                        <span>Core Focus</span>
+                        <strong>Statistical Analysis</strong>
+                        <p>Turning raw data into clear, usable insight.</p>
+                    </article>
+                    <article class="hero-highlight">
+                        <span>Tools</span>
+                        <strong>Python, R, SQL</strong>
+                        <p>Working across analysis, modeling, and reporting.</p>
+                    </article>
+                    <article class="hero-highlight">
+                        <span>Output</span>
+                        <strong>Visual Storytelling</strong>
+                        <p>Presenting findings with structure and clarity.</p>
+                    </article>
+                </div>
+
+                <div class="cta-row">
+                    <a class="btn btn-primary" href="project.html">View Projects</a>
+                    <a class="btn btn-secondary" href="about.html">Explore Profile</a>
+                    <a class="btn btn-secondary" href="contact.html">Collaborate</a>
+                </div>
+            </section>
+        </section>
+
+        <section class="container section reveal" id="documents">
+            <h2 class="section-title">CV & Resume</h2>
+            <div class="document-grid">
+                <article class="card document-card">
+                    <span class="document-label">Curriculum Vitae</span>
+                    <h3>Open CV</h3>
+                    <p>Access the current CV version from the linked Drive file.</p>
+                    <a class="btn btn-secondary" href="https://drive.google.com/file/d/1aOy7FSJyvc085ZJghm34O29dfc8_3Ca0/view?usp=drive_link" target="_blank" rel="noopener">Open CV</a>
+                </article>
+                <article class="card document-card">
+                    <span class="document-label">Resume</span>
+                    <h3>Open Resume</h3>
+                    <p>The resume button currently points to the same Drive file for quick access.</p>
+                    <a class="btn btn-secondary" href="https://drive.google.com/file/d/1aOy7FSJyvc085ZJghm34O29dfc8_3Ca0/view?usp=drive_link" target="_blank" rel="noopener">Open Resume</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">&copy; <span data-year></span> Rifat Hasan Shakil</div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-

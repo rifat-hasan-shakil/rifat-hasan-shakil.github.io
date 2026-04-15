@@ -1,105 +1,46 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Study notes by Rifat Hasan Shakil." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notes | Rifat Hasan Shakil</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Study notes by Rifat Hasan Shakil on statistics, machine learning, and data workflows.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">Rifat Hasan Shakil</a>
+    <div class="container nav-shell">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="brandOrbClip"><circle cx="20" cy="20" r="18"/></clipPath></defs><g clip-path="url(#brandOrbClip)" fill="currentColor"><rect x="2" y="5" width="36" height="4" rx="2"/><rect x="2" y="12" width="32" height="4" rx="2"/><rect x="8" y="19" width="30" height="4" rx="2"/><rect x="2" y="26" width="34" height="4" rx="2"/><rect x="2" y="33" width="27" height="4" rx="2"/></g></svg></span><span class="brand-name">Rifat Hasan Shakil</span></a>
       <nav class="main-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <div class="nav-dropdown" data-dropdown>
-          <button class="nav-dropdown-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">
-            About Me
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="dropdown-menu" id="about-menu" data-dropdown-menu>
-            <a href="about.html#skills">Skills</a>
-            <a href="about.html#education">Education</a>
-            <a href="about.html#certifications">Certifications</a>
-          </div>
-        </div>
-        <a href="projects.html">Projects</a>
-        <a href="blogs.html">Blogs</a>
-        <a class="active" href="notes.html">Notes</a>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="project.html">Projects</a>
+        <a class="nav-link" href="blogs.html">Blogs</a>
+        <a class="nav-link active" href="notes.html">Notes</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
-      <a class="talk-btn" href="contact.html">Let's Talk</a>
-      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">☰</button>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false"><span class="theme-switch" aria-hidden="true"><span class="theme-switch__track"></span><span class="theme-switch__thumb"></span></span></button>
+      <a class="contact-btn" href="contact.html">Let's Talk</a>
+      <button class="mobile-btn" type="button" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">=</button>
     </div>
     <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
       <a href="index.html">Home</a>
-      <details>
-        <summary>About Me</summary>
-        <a href="about.html#skills">Skills</a>
-        <a href="about.html#education">Education</a>
-        <a href="about.html#certifications">Certifications</a>
-      </details>
-      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Projects</a>
       <a href="blogs.html">Blogs</a>
       <a href="notes.html">Notes</a>
-      <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
       <a href="contact.html">Let's Talk</a>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-kicker">Notes</div>
-        <h1>Quick references and reusable study summaries</h1>
-        <p class="hero-subtitle">Collected cheat sheets and practical reminders for statistics, machine learning, and data handling.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid grid-2">
-        <article class="card">
-          <h3>Hypothesis Testing Cheatsheet</h3>
-          <ul>
-            <li>Assumptions checklist before selecting a test</li>
-            <li>How to interpret p-values and confidence intervals together</li>
-            <li>Common pitfalls in one-tailed vs two-tailed testing</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Regression Diagnostics Checklist</h3>
-          <ul>
-            <li>Residual shape and variance checks</li>
-            <li>Multicollinearity via VIF and condition numbers</li>
-            <li>Influence points and leverage review workflow</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Classification Model Evaluation</h3>
-          <ul>
-            <li>Confusion matrix reading strategy</li>
-            <li>Precision, recall, F1, ROC-AUC by objective</li>
-            <li>Threshold tuning for imbalanced classes</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Data Cleaning Pipeline</h3>
-          <ul>
-            <li>Missing value strategy map</li>
-            <li>Outlier handling with IQR and robust alternatives</li>
-            <li>Feature encoding and scaling order of operations</li>
-          </ul>
-        </article>
-      </div>
+    <section class="container section reveal">
+      <span class="kicker">Study Notes</span>
+      <h1>Notes coming soon</h1>
+      <p class="hero-subtitle">This section is intentionally empty for now while the content is rewritten in your own words.</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">© 2026 Rifat Hasan Shakil</div>
-  </footer>
-
+  <footer class="site-footer"><div class="container">&copy; <span data-year></span> Rifat Hasan Shakil</div></footer>
   <script src="script.js"></script>
 </body>
 </html>
-

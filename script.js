@@ -1,124 +1,174 @@
-(function () {
+﻿(function () {
+  const siteHeader = document.querySelector(".site-header");
   const dropdown = document.querySelector("[data-dropdown]");
-  const toggle = document.querySelector("[data-dropdown-toggle]");
-  const menu = document.querySelector("[data-dropdown-menu]");
+  const dropToggle = document.querySelector("[data-dropdown-toggle]");
   const mobileToggle = document.querySelector("[data-mobile-toggle]");
   const mobileNav = document.querySelector("[data-mobile-nav]");
-  const themeToggles = document.querySelectorAll("[data-theme-toggle]");
+  const themeButtons = document.querySelectorAll("[data-theme-toggle]");
   const typingTarget = document.querySelector("[data-typing-target]");
-  const themeStorageKey = "site-theme";
+  const revealElements = document.querySelectorAll(".reveal");
+  const contactForm = document.querySelector("[data-contact-form]");
+  const yearTarget = document.querySelector("[data-year]");
+  const themeKey = "rifat-site-theme";
 
-  function getPreferredTheme() {
-    const saved = localStorage.getItem(themeStorageKey);
-    if (saved === "dark" || saved === "light") {
-      return saved;
+  function updateHeaderState() {
+    if (!siteHeader) {
+      return;
     }
-
-    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    siteHeader.classList.toggle("scrolled", window.scrollY > 12);
   }
 
-  function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
+  let headerTicking = false;
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (headerTicking) {
+        return;
+      }
+      headerTicking = true;
+      window.requestAnimationFrame(function () {
+        updateHeaderState();
+        headerTicking = false;
+      });
+    },
+    { passive: true }
+  );
+  updateHeaderState();
 
-    themeToggles.forEach(function (btn) {
-      const isDark = theme === "dark";
-      const nextLabel = isDark ? "light" : "dark";
-      btn.innerHTML = isDark
-        ? '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.5" stroke-width="2"></circle><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.5 1.5M17.6 17.6l1.5 1.5M2 12h2.2M19.8 12H22M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5" stroke-width="2" stroke-linecap="round"></path></svg>'
-        : '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 13.1A8.9 8.9 0 1 1 10.9 3c-.2.6-.3 1.2-.3 1.9 0 4.5 3.6 8.1 8.1 8.1.8 0 1.6-.1 2.3-.4Z" stroke-width="2" stroke-linejoin="round"></path></svg>';
-      btn.setAttribute("aria-label", "Switch to " + nextLabel + " mode");
-    });
+  if (yearTarget) {
+    yearTarget.textContent = String(new Date().getFullYear());
   }
 
   function setTheme(theme) {
-    localStorage.setItem(themeStorageKey, theme);
-    applyTheme(theme);
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
+    localStorage.setItem(themeKey, theme);
+
+    themeButtons.forEach(function (btn) {
+      btn.classList.toggle("is-light", theme === "light");
+      btn.setAttribute("aria-label", "Switch to " + (theme === "dark" ? "light" : "dark") + " mode");
+      btn.title = "Switch to " + (theme === "dark" ? "light" : "dark") + " mode";
+      btn.setAttribute("aria-pressed", String(theme === "light"));
+    });
   }
 
-  applyTheme(getPreferredTheme());
+  function getTheme() {
+    const stored = localStorage.getItem(themeKey);
+    if (stored === "light" || stored === "dark") {
+      return stored;
+    }
+    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  }
 
-  if (toggle && dropdown && menu) {
-    toggle.addEventListener("click", function () {
-      const isOpen = dropdown.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
+  setTheme(getTheme());
+
+  themeButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+  });
+
+  if (dropToggle && dropdown) {
+    function closeDropdown() {
+      dropdown.classList.remove("open");
+      dropToggle.setAttribute("aria-expanded", "false");
+    }
+
+    dropToggle.addEventListener("click", function () {
+      const open = dropdown.classList.toggle("open");
+      dropToggle.setAttribute("aria-expanded", String(open));
     });
 
     document.addEventListener("click", function (event) {
       if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+        closeDropdown();
       }
     });
 
     document.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
-        dropdown.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+        closeDropdown();
       }
+    });
+
+    dropdown.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeDropdown();
+      });
     });
   }
 
   if (mobileToggle && mobileNav) {
     mobileToggle.addEventListener("click", function () {
-      const isOpen = mobileNav.classList.toggle("open");
-      mobileToggle.setAttribute("aria-expanded", String(isOpen));
+      const open = mobileNav.classList.toggle("open");
+      mobileToggle.setAttribute("aria-expanded", String(open));
     });
-  }
 
-  if (themeToggles.length > 0) {
-    themeToggles.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
-        setTheme(current === "dark" ? "light" : "dark");
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mobileNav.classList.remove("open");
+        mobileToggle.setAttribute("aria-expanded", "false");
       });
     });
   }
 
   if (typingTarget) {
     const phrases = [
-      "Turning complex data into clear action",
-      "Finding signal inside noisy datasets",
-      "Building practical insights with statistics"
+      "statistical rigor",
+      "predictive modeling",
+      "clear visual storytelling"
     ];
-
-    let phraseIndex = 0;
-    let charIndex = 0;
+    let pIndex = 0;
+    let cIndex = 0;
     let deleting = false;
-    let pause = 0;
 
-    function typeLoop() {
-      if (pause > 0) {
-        pause -= 1;
-        setTimeout(typeLoop, 80);
-        return;
-      }
-
-      const phrase = phrases[phraseIndex];
-
+    function tick() {
+      const phrase = phrases[pIndex];
       if (!deleting) {
-        charIndex += 1;
-        typingTarget.textContent = phrase.slice(0, charIndex);
-
-        if (charIndex >= phrase.length) {
+        cIndex += 1;
+        typingTarget.textContent = phrase.slice(0, cIndex);
+        if (cIndex === phrase.length) {
           deleting = true;
-          pause = 18;
+          setTimeout(tick, 1300);
+          return;
         }
-
-        setTimeout(typeLoop, 60);
+        setTimeout(tick, 70);
       } else {
-        charIndex -= 1;
-        typingTarget.textContent = phrase.slice(0, charIndex);
-
-        if (charIndex <= 0) {
+        cIndex -= 1;
+        typingTarget.textContent = phrase.slice(0, cIndex);
+        if (cIndex === 0) {
           deleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-          pause = 4;
+          pIndex = (pIndex + 1) % phrases.length;
         }
-
-        setTimeout(typeLoop, 32);
+        setTimeout(tick, 40);
       }
     }
+    tick();
+  }
 
-    typeLoop();
+  if (revealElements.length > 0) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.14 }
+    );
+
+    revealElements.forEach(function (item) {
+      observer.observe(item);
+    });
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      alert("Thanks! Your message was captured on this static portfolio page.");
+      contactForm.reset();
+    });
   }
 })();

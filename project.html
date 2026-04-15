@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rifat Hasan Shakil</title>
+    <meta name="description" content="Portfolio projects by Rifat Hasan Shakil in data analysis, machine learning, and statistics.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="brandOrbClip"><circle cx="20" cy="20" r="18"/></clipPath></defs><g clip-path="url(#brandOrbClip)" fill="currentColor"><rect x="2" y="5" width="36" height="4" rx="2"/><rect x="2" y="12" width="32" height="4" rx="2"/><rect x="8" y="19" width="30" height="4" rx="2"/><rect x="2" y="26" width="34" height="4" rx="2"/><rect x="2" y="33" width="27" height="4" rx="2"/></g></svg></span><span class="brand-name">Rifat Hasan Shakil</span></a>
+            <nav class="main-nav" aria-label="Primary">
+                <a class="nav-link" href="index.html">Home</a>
+                <div class="nav-dropdown" data-dropdown>
+                    <button class="drop-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">About <svg class="drop-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+                    <div class="drop-menu" id="about-menu" data-dropdown-menu>
+                        <a href="about.html#skills">Skills</a>
+                        <a href="about.html#education">Education</a>
+                        <a href="about.html#certifications">Certifications</a>
+                    </div>
+                </div>
+                <a class="nav-link active" href="project.html">Projects</a>
+                <a class="nav-link" href="blogs.html">Blogs</a>
+                <a class="nav-link" href="notes.html">Notes</a>
+            </nav>
+            <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false"><span class="theme-switch" aria-hidden="true"><span class="theme-switch__track"></span><span class="theme-switch__thumb"></span></span></button>
+            <a class="contact-btn" href="contact.html">Let's Talk</a>
+            <button class="mobile-btn" type="button" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">=</button>
+        </div>
+        <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="notes.html">Notes</a>
+            <a href="contact.html">Let's Talk</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="container section reveal">
+            <span class="kicker">Selected Work</span>
+            <h1>My Projects</h1>
+            <p class="hero-subtitle">A curated selection of machine learning, data analysis, and full-stack projects that showcase my technical expertise and passion for building intelligent systems.</p>
+        </section>
+
+        <section class="container section reveal">
+            <div class="projects-grid">
+                <article class="project-card card">
+                    <figure class="project-card__figure">
+                        <img src="assets/projects/nexus-ai/Screenshot%202026-03-25%20002219.png" alt="Nexus AI recommendation engine interface">
+                        <button class="project-card__gallery-btn" type="button" data-project="nexus-ai" aria-label="View gallery">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </button>
+                    </figure>
+
+                    <div class="project-card__content">
+                        <h3>Nexus AI Recommendation Engine</h3>
+                        <p class="project-card__desc">High-performance, dual-domain ML recommendation system with content-based filtering for movies and anime. Features lightning-fast inference, live metadata scrapers, and Netflix-inspired UI.</p>
+
+                        <div class="project-card__meta">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Scikit-Learn</span>
+                            <span class="tag">NLP</span>
+                        </div>
+
+                        <div class="project-card__links">
+                            <a href="https://github.com/rifat-hasan-shakil/nexus-ai-recommender" target="_blank" rel="noopener" class="project-link github" aria-label="View on GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://www.kaggle.com/code/rifathasanshakil3301/nexus-ai" target="_blank" rel="noopener" class="project-link kaggle" aria-label="View on Kaggle">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.234 0-.351-.117-.351-.352V.141c0-.234.117-.351.351-.351h2.431c.234 0 .351.117.351.351v15.325l5.539-5.344c.142-.14.305-.211.516-.211h3.35c.187 0 .28.094.28.281 0 .047-.022.117-.07.211L11.53 15.655l7.202 7.971c.071.07.117.141.093.234z"/>
+                                </svg>
+                                Kaggle
+                            </a>
+                        </div>
+
+                        <a href="project-nexus-ai.html" class="btn btn-primary full-width">View Full Details</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">&copy; <span data-year></span> Rifat Hasan Shakil</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

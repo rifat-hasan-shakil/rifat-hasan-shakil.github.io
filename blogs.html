@@ -1,85 +1,46 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Blog posts by Rifat Hasan Shakil on data science and statistics." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blogs | Rifat Hasan Shakil</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Blog ideas and writing topics by Rifat Hasan Shakil on statistics and data science.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">Rifat Hasan Shakil</a>
+    <div class="container nav-shell">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="brandOrbClip"><circle cx="20" cy="20" r="18"/></clipPath></defs><g clip-path="url(#brandOrbClip)" fill="currentColor"><rect x="2" y="5" width="36" height="4" rx="2"/><rect x="2" y="12" width="32" height="4" rx="2"/><rect x="8" y="19" width="30" height="4" rx="2"/><rect x="2" y="26" width="34" height="4" rx="2"/><rect x="2" y="33" width="27" height="4" rx="2"/></g></svg></span><span class="brand-name">Rifat Hasan Shakil</span></a>
       <nav class="main-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <div class="nav-dropdown" data-dropdown>
-          <button class="nav-dropdown-toggle" data-dropdown-toggle aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">
-            About Me
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="dropdown-menu" id="about-menu" data-dropdown-menu>
-            <a href="about.html#skills">Skills</a>
-            <a href="about.html#education">Education</a>
-            <a href="about.html#certifications">Certifications</a>
-          </div>
-        </div>
-        <a href="projects.html">Projects</a>
-        <a class="active" href="blogs.html">Blogs</a>
-        <a href="notes.html">Notes</a>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="project.html">Projects</a>
+        <a class="nav-link active" href="blogs.html">Blogs</a>
+        <a class="nav-link" href="notes.html">Notes</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
-      <a class="talk-btn" href="contact.html">Let's Talk</a>
-      <button class="mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">☰</button>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false"><span class="theme-switch" aria-hidden="true"><span class="theme-switch__track"></span><span class="theme-switch__thumb"></span></span></button>
+      <a class="contact-btn" href="contact.html">Let's Talk</a>
+      <button class="mobile-btn" type="button" data-mobile-toggle aria-expanded="false" aria-controls="mobile-nav">=</button>
     </div>
     <div class="container mobile-nav" id="mobile-nav" data-mobile-nav>
       <a href="index.html">Home</a>
-      <details>
-        <summary>About Me</summary>
-        <a href="about.html#skills">Skills</a>
-        <a href="about.html#education">Education</a>
-        <a href="about.html#certifications">Certifications</a>
-      </details>
-      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Projects</a>
       <a href="blogs.html">Blogs</a>
       <a href="notes.html">Notes</a>
-      <button class="theme-toggle mobile-theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
       <a href="contact.html">Let's Talk</a>
     </div>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-kicker">Blogs</div>
-        <h1>Writing about statistics, analytics, and model thinking</h1>
-        <p class="hero-subtitle">Notes from experiments, project breakdowns, and practical lessons from working with real data.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid grid-3">
-        <article class="card">
-          <h3>How I Validate Time Series Assumptions</h3>
-          <p>ADF, KPSS, ACF, and PACF steps I use before fitting ARIMA-style models.</p>
-        </article>
-        <article class="card">
-          <h3>When KNN Works Better Than You Expect</h3>
-          <p>A practical guide to scaling, feature selection, and choosing K using cross-validation.</p>
-        </article>
-        <article class="card">
-          <h3>From EDA to Storytelling</h3>
-          <p>Turning descriptive plots into business-focused recommendations stakeholders can act on.</p>
-        </article>
-      </div>
+    <section class="container section reveal">
+      <span class="kicker">Writing</span>
+      <h1>Blogs coming soon</h1>
+      <p class="hero-subtitle">This section is being rebuilt and will be updated with original writing later.</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">© 2026 Rifat Hasan Shakil</div>
-  </footer>
-
+  <footer class="site-footer"><div class="container">&copy; <span data-year></span> Rifat Hasan Shakil</div></footer>
   <script src="script.js"></script>
 </body>
 </html>
-
