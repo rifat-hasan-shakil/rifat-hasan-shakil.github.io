@@ -2085,8 +2085,14 @@ html.mobile-perf body::before {
     display: none;
 }
 
+html.mobile-perf body {
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+}
+
 html.mobile-perf .site-header,
 html.mobile-perf .site-header.scrolled {
+    position: static;
+    top: auto;
     padding-top: 8px;
     transition: none;
 }
@@ -2105,6 +2111,33 @@ html.mobile-perf .reveal.visible {
     opacity: 1;
     transform: none;
     transition: none;
+}
+
+html.mobile-perf .hero::after {
+    display: none;
+}
+
+html.mobile-perf .profile-card,
+html.mobile-perf .card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+    background: var(--surface-strong);
+}
+
+html.mobile-perf .hero-copy,
+html.mobile-perf .hero-highlight,
+html.mobile-perf .document-card,
+html.mobile-perf .contact-stage,
+html.mobile-perf .feature-card,
+html.mobile-perf .tech-card,
+html.mobile-perf .project-card {
+    background: var(--surface-strong);
+}
+
+html.mobile-perf .contact-link {
+    box-shadow: none;
+    filter: none;
 }
 
 html.mobile-perf .contact-stage::before,
@@ -2137,6 +2170,16 @@ html.mobile-perf .theme-switch__track {
 html.mobile-perf .project-card__gallery-btn {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+}
+
+html.mobile-perf .section,
+html.mobile-perf .card,
+html.mobile-perf .project-card,
+html.mobile-perf .education-item,
+html.mobile-perf .feature-card,
+html.mobile-perf .tech-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 460px;
 }
 
 :focus-visible {
