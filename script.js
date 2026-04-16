@@ -10,6 +10,11 @@
   const contactForm = document.querySelector("[data-contact-form]");
   const yearTarget = document.querySelector("[data-year]");
   const themeKey = "rifat-site-theme";
+  const isMobilePerf = window.matchMedia("(max-width: 900px), (pointer: coarse)").matches;
+
+  if (isMobilePerf) {
+    document.documentElement.classList.add("mobile-perf");
+  }
 
   function updateHeaderState() {
     if (!siteHeader) {
@@ -18,22 +23,26 @@
     siteHeader.classList.toggle("scrolled", window.scrollY > 12);
   }
 
-  let headerTicking = false;
-  window.addEventListener(
-    "scroll",
-    function () {
-      if (headerTicking) {
-        return;
-      }
-      headerTicking = true;
-      window.requestAnimationFrame(function () {
-        updateHeaderState();
-        headerTicking = false;
-      });
-    },
-    { passive: true }
-  );
-  updateHeaderState();
+  if (!isMobilePerf) {
+    let headerTicking = false;
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (headerTicking) {
+          return;
+        }
+        headerTicking = true;
+        window.requestAnimationFrame(function () {
+          updateHeaderState();
+          headerTicking = false;
+        });
+      },
+      { passive: true }
+    );
+    updateHeaderState();
+  } else if (siteHeader) {
+    siteHeader.classList.remove("scrolled");
+  }
 
   if (yearTarget) {
     yearTarget.textContent = String(new Date().getFullYear());
@@ -113,7 +122,7 @@
     });
   }
 
-  if (typingTarget) {
+  if (typingTarget && !isMobilePerf) {
     const phrases = [
       "statistical rigor",
       "predictive modeling",
@@ -148,20 +157,26 @@
   }
 
   if (revealElements.length > 0) {
-    const observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.14 }
-    );
+    if (isMobilePerf) {
+      revealElements.forEach(function (item) {
+        item.classList.add("visible");
+      });
+    } else {
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
 
-    revealElements.forEach(function (item) {
-      observer.observe(item);
-    });
+      revealElements.forEach(function (item) {
+        observer.observe(item);
+      });
+    }
   }
 
   if (contactForm) {

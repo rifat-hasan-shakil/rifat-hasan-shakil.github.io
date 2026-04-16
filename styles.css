@@ -2076,6 +2076,69 @@ ul {
     }
 }
 
+/* Phone performance mode: keep layout, remove costly paint/composite effects */
+html.mobile-perf {
+    scroll-behavior: auto;
+}
+
+html.mobile-perf body::before {
+    display: none;
+}
+
+html.mobile-perf .site-header,
+html.mobile-perf .site-header.scrolled {
+    padding-top: 8px;
+    transition: none;
+}
+
+html.mobile-perf .nav-shell,
+html.mobile-perf .site-header.scrolled .nav-shell {
+    transform: none;
+    transition: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+html.mobile-perf .reveal,
+html.mobile-perf .reveal.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+
+html.mobile-perf .contact-stage::before,
+html.mobile-perf .contact-stage::after,
+html.mobile-perf .contact-spotlight,
+html.mobile-perf .contact-spotlight-ring {
+    display: none;
+}
+
+html.mobile-perf .contact-info-card,
+html.mobile-perf .spin-a,
+html.mobile-perf .spin-b,
+html.mobile-perf .spin-c,
+html.mobile-perf .spin-d,
+html.mobile-perf .spin-e,
+html.mobile-perf .spin-f {
+    animation: none;
+}
+
+html.mobile-perf .project-card__figure img,
+html.mobile-perf .project-card__gallery-btn,
+html.mobile-perf .contact-link,
+html.mobile-perf .submit-btn,
+html.mobile-perf .btn,
+html.mobile-perf .theme-switch__thumb,
+html.mobile-perf .theme-switch__track {
+    transition: none;
+}
+
+html.mobile-perf .project-card__gallery-btn {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
 :focus-visible {
     outline: 2px solid rgba(50, 209, 255, 0.45);
     outline-offset: 2px;
