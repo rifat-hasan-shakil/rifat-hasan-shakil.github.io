@@ -2081,6 +2081,13 @@ html.mobile-perf {
     scroll-behavior: auto;
 }
 
+html.mobile-perf *,
+html.mobile-perf *::before,
+html.mobile-perf *::after {
+    animation: none !important;
+    transition: none !important;
+}
+
 html.mobile-perf body::before {
     display: none;
 }
@@ -2100,10 +2107,18 @@ html.mobile-perf .site-header.scrolled {
 html.mobile-perf .nav-shell,
 html.mobile-perf .site-header.scrolled .nav-shell {
     transform: none;
-    transition: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+    background: var(--surface-strong);
+}
+
+html.mobile-perf .nav-shell::before,
+html.mobile-perf .hero-copy::before,
+html.mobile-perf .social-row a::before,
+html.mobile-perf .contact-link::before,
+html.mobile-perf .contact-link::after {
+    display: none;
 }
 
 html.mobile-perf .reveal,
@@ -2121,7 +2136,7 @@ html.mobile-perf .profile-card,
 html.mobile-perf .card {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+    box-shadow: none;
     background: var(--surface-strong);
 }
 
@@ -2138,6 +2153,15 @@ html.mobile-perf .project-card {
 html.mobile-perf .contact-link {
     box-shadow: none;
     filter: none;
+}
+
+html.mobile-perf .social-row a,
+html.mobile-perf .project-link,
+html.mobile-perf .btn,
+html.mobile-perf .submit-btn,
+html.mobile-perf .gallery-thumb,
+html.mobile-perf .project-card__gallery-btn {
+    box-shadow: none;
 }
 
 html.mobile-perf .contact-stage::before,
